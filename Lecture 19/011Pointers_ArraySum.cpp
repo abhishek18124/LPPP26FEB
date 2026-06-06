@@ -12,9 +12,15 @@ int computeSum(int arr[], int n) {
 	return sum;
 }
 
-void modify(int* arr, int n) {
+// void modify(int* arr, int n) {
+// 	for (int i = 0; i < n; i++) {
+// 		(*(arr + i))++;
+// 	}
+// }
+
+void modify(int arr[], int n) {
 	for (int i = 0; i < n; i++) {
-		(*(arr + i))++;
+		arr[i]++;
 	}
 }
 
@@ -24,6 +30,7 @@ int main() {
 	int n = sizeof(arr) / sizeof(int);
 
 	modify(&arr[0], n);
+	// modify(arr, n);
 
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << " ";
